@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home - PUPSIS</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="osssac/student/assets/admin/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="osssac/student/assets/admin/plugins/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="osssac/student/assets/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="osssac/student/assets/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="osssac/student/assets/admin/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="osssac/student/assets/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="osssac/student/assets/admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="osssac/student/assets/admin/dist/css/adminlte.min.css">
+
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <script src="osssac/student/assets/admin/plugins/jquery/jquery.min.js"></script>
+
+  <!-- cookie -->
+  <!--
+  <link rel="stylesheet" type="text/css" href="osssac/resources/css/cookieconsent.min.css" />
+  <script src="osssac/resources/js/cookieconsent.min.js"></script>
+  -->
+  <style>
+    .active-main-item{ border-bottom: 2px solid #800000; }
+    .accent-theme .btn-link, .accent-theme a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.btn){
+        color: #800000;
+    };
+    .text-theme, a { color: #800000 !important; }
+    .card-theme.card-outline{
+      border-top: 3px solid #800000;
+    }
+    .card-theme:not(.card-outline) > .card-header {
+      background-color: #800000;
+      color: white;
+    }
+    .btn-theme {
+      background-color: #800000;
+      color: white;
+    }
+    .btn-theme:hover {
+      background-color: #b80303;
+      color: white;
+    }
+    .btn-theme:focus{
+      background-color: #500202;;
+      color: white;
+    }
+    .btn-lg{
+      padding: 25px 70px;
+    }
+    
+    .form-control {
+      height: calc(1.8125rem + 2px);
+      padding: .25rem .5rem;
+      font-size: .875rem;
+      line-height: 1.5;
+      border-radius: .2rem;
+    }
+    .callout a{
+      color:white;
+      text-decoration: none;
+    }
+    .input-sm{
+      font-size: .75rem;
+      height: calc(1.5rem + 1px);
+    }
+    section.content .row .col{
+    	margin: 0px 0px 20px 0px;
+    	padding: 0px;
+    }
+    .card{
+    	margin: 4px;
+    	padding: 0px;
+    }
+
+	/* ADD for accordion */
+	div.card-header .mb-0 a{
+		display:block;
+		height:100%;
+		width:100%;
+	}
+
+  </style>
+</head>
+<body class="hold-transition layout-top-nav accent-theme">
+<div class="wrapper">
+
+<!-- Navbar -->
+  <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <img src="osssac/student/assets/images/PUPLogo.png" alt="PUP Logo" class="brand-image img-circle elevation-1"
+             style="opacity: .8">
+        <span class="brand-text font-weight-normal margin-bottom">
+          PUPSIS        </span>
+      </a>
+      
+      <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+            <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item active-main-item">
+            <a href="index.php" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a href="#" class="nav-link">Enrollment</a>
+          </li>
+          <li class="nav-item ">
+            <a href="#" class="nav-link">Accounts</a>
+          </li>
+          <li class="nav-item ">
+            <a href="#" class="nav-link">Schedule</a>
+          </li>
+          <li class="nav-item ">
+            <a href="#" class="nav-link">Grades</a>
+          </li>
+		   <li class="nav-item ">
+            <a href="#" class="nav-link">Forms</a>
+          </li>
+		   <li class="nav-item ">
+            <a href="osssac.php" class="nav-link">Support</a>
+          </li>
+        </ul>
+        
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <b class="text-primary"><i class="fa fa-user"></i></b><i class="far fa-caret-square-down ml-1"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-user mr-2"></i> Profile
+              </a>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-key mr-2"></i> Change Password
+              </a>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-share-square mr-2"></i> Sign out
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+    </div> <!-- container -->
+  </nav>
+<!-- /.navbar -->    
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<div class="content">
+		<div class="container">
+      
+                
+			<section class="content-header">
+				<h1>Home</h1>
+    		</section>
+	<section class="content">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="card">
+					<div class="card-header">
+					
+						<h3 class="card-title text-danger text-bold">
+						Dela Cruz, Juan Lopez (2099-00001-MN-0)						</h3>
+					</div>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-12">
+								 <div class="info-box">
+								  <span class="info-box-icon bg-danger"><i class="fas fa-file-download"></i></span>
+
+								  <div class="info-box-content">
+									<span class="info-box-text"><a href="#" class="text-bold" target="_blank"> <i class="fas fa-file-word"></i>  PUP Internship Memorandum of Agreement </a></span>
+								  </div>
+								  <!-- /.info-box-content -->
+								</div>
+								
+							</div>
+						</div>
+							
+						
+						
+						
+						<div class="row">
+								<div class="col-md-3">
+									<div class="card">
+	
+										<div class="card-body p-0">
+											  <ul class="nav nav-pills flex-column">
+												<li class="nav-item">
+												  <a href="#" class="nav-link">
+													<i class="fas fa-inbox mr-1"></i> Inbox (0)
+																									  </a>
+												</li>
+												<li class="nav-item ">
+												  <a href="#" class="nav-link"><i class="fas fa-bookmark ml-1 mr-1"></i> Graduation Clearance</a>
+												</li>
+												<li class="nav-item ">
+												  <a href="#" class="nav-link"><i class="fas fa-comment ml-1 mr-1"></i> Submit Feedback</a>
+												</li>
+											  </ul>
+										</div>
+
+									</div>
+
+
+								</div>
+								<!-- /.col -->
+								<div class="col-md-9">
+																			  <div class="card">
+										<div class="card-header">
+											<h3 class="card-title"><b>Inbox</b></h3>
+										  <!-- /.card-tools -->
+										</div>
+										<div class="card-body p-0">
+											  <div class="table-responsive mailbox-messages">
+												<table class="table table-hover">
+													<tbody>
+													<tr><td colspan='3' class='callout callout-warning'>Your inbox is empty.</td></tr>												  </tbody>
+												</table>
+											  </div>
+										</div>
+										
+									  </div>
+								  <!-- /.card -->
+								</div>
+								<!-- /.col -->
+						</div>
+						
+					</div>	
+				</div>
+			</div>		
+		</div>	
+
+<!-- MARK BEGIN -->
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="subjcard card card-danger card-theme card-outline">
+										<div class="card-header">
+											<h3 class="card-title"> <b>GENERAL GUIDELINES FOR IMPLEMENTATION OF RA 10931- UNIVERSAL ACCESS TO QUALITY TERTIARY EDUCATION IN PUP</b> </h3>
+										</div>
+										<div class="card-body">
+											<div class="text-xs">
+												<p class="mb-1">1. As stated in the Act, a student who has satisfied the admission requirements shall be eligible in availing Free Education provided that the student does not fall in the identified "ineligible" stated in Rule II Section 6 "Exceptions to Free HE". </p>
+												<p>2. For a student to enjoy continued Free Education benefits, he/she must have good scholastic standing. However, the matrix below shows the action to be taken when students have scholastic delinquency: </p>
+												<p class="p-0 m-0"><b>For 21 units and above load in previous semester</b></p>
+												<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+													<div class="row">
+														<div class="col-sm-12 col-md-6"></div>
+														<div class="col-sm-12 col-md-6"></div>
+													</div>
+													<div class="row">
+														<div class="col-sm-12">
+															<table class="table datatables table-bordered table-condensed table-striped p-0 m-0 dataTable no-footer dtr-inline" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+																<thead>
+																	<tr role="row">
+																		<th class="sorting_disabled" rowspan="1" colspan="1">Number of Subject Failed/ Withdrawn/ Dropped</th>
+																		<th class="sorting_disabled" rowspan="1" colspan="1">Action to be Taken</th>
+																		<th class="sorting_disabled" rowspan="1" colspan="1">Remarks</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr role="row" class="odd">
+																		<td tabindex="0">1 subject</td>
+																		<td>Warning</td>
+																		<td>Warning*</td>
+																	</tr>
+																	<tr role="row" class="even">
+																		<td tabindex="0">2 subjects</td>
+																		<td>Warning with reduced load by 3 units</td>
+																		<td>Warning*</td>
+																	</tr>
+																	<tr role="row" class="odd">
+																		<td tabindex="0">3 subjects</td>
+																		<td>Reduced load by 6 units</td>
+																		<td>Scholarship will be forfeited for the following semester (Paying)</td>
+																	</tr>
+																	<tr role="row" class="even">
+																		<td tabindex="0">4 subjects</td>
+																		<td>Dismissal-Dropped from the University</td>
+																		<td>-</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-12 col-md-5">
+															<div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div>
+														</div>
+														<div class="col-sm-12 col-md-7"></div>
+													</div>
+												</div> <br> <p class="p-0 m-0"><b>For 20 units and below load in previous semester</b></p>
+												<div id="DataTables_Table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+													<div class="row">
+														<div class="col-sm-12 col-md-6"></div>
+														<div class="col-sm-12 col-md-6"></div>
+													</div>
+													<div class="row">
+														<div class="col-sm-12">
+															<table class="table datatables table-bordered table-condensed table-striped p-0 m-0 dataTable no-footer dtr-inline" id="DataTables_Table_1" role="grid" aria-describedby="DataTables_Table_1_info">
+																<thead>
+																	<tr role="row">
+																		<th class="sorting_disabled" rowspan="1" colspan="1">Number of Subject Failed/ Withdrawn/ Dropped</th>
+																		<th class="sorting_disabled" rowspan="1" colspan="1">Action to be Taken</th>
+																		<th class="sorting_disabled" rowspan="1" colspan="1">Remarks</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr role="row" class="odd">
+																		<td tabindex="0">1-2 subjects</td>
+																		<td>Warning</td>
+																		<td>Warning*</td>
+																	</tr>
+																	<tr role="row" class="even">
+																		<td tabindex="0">3 subjects</td>
+																		<td>Warning with reduced load by 3 units</td>
+																		<td>Scholarship will be forfeited for the following semester (Paying)</td>
+																	</tr>
+																	<tr role="row" class="odd">
+																		<td tabindex="0">4 subjects</td>
+																		<td>Dismissal-Dropped from the University</td>
+																		<td>-</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-12 col-md-5">
+															<div class="dataTables_info" id="DataTables_Table_1_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div>
+														</div>
+														<div class="col-sm-12 col-md-7"></div>
+													</div>
+												</div> <br> <label>*Note: Student who acquired a "Warning" for two consecutive semesters, the scholarship grant will be forfeited the following semester.</label> <p class="mb-1">3. If a student stays beyond the allowed number of years covered by the FREE EDUCATION LAW, he/ she shall pay the remaining allowable years of stay provided that this is still within the residency period.</p>
+												<p class="mb-1">4. In case a student intends to file a leave of absence, the same procedure shall be followed as stated in the PUP Student Handbook. With permission from the University, the leave of absence will enable the student to still enjoy the scholarship on his/her return to the university.</p>
+												<p class="mb-1">5.Existing admission, retention, and graduation rules and policy of the University shall be upheld. They shall be used as a basis to complement the implementation of the Act. </p>
+												<p class="mb-1">6. For provisions inconsistent with the PUP Student Handbook, the proposed guidelines shall prevail.</p>
+<!-- MARK END -->
+                      </div>
+
+      </div>
+    </div>			</div>		
+		</div>				
+	</section>	
+					
+
+	<div class="modal fade" id="modal-msg">
+	  <div class="modal-dialog modal-lg">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h4 class="modal-title" id='modal-msg-title'>Message Title</h4>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body" id='modal-msg-body'>
+			<h6>From: <span id='msg-from'></span><span class="mailbox-read-time float-right"><span id='msg-date'></span></span></h6>
+			<p id='msg-body'></p>
+		  </div>
+		  <div class="modal-footer text-right">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+		<!-- /.modal-content -->
+	  </div>
+	  <!-- /.modal-dialog -->
+	</div>
+
+
+		</div><!-- /.container-fluid -->
+	</div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+  	<div class="row text-xs">
+			<div class="col-md-6 col-sm-12 text-center">
+				<b>For questions and comments, email us at</b> <a href="https://sis2.pup.edu.ph/student/assets/admin/plugins/fontawesome-free/webfonts/fa-brands-400.svg" target="_blank"> <img src="osssac/student/assets/images/helpdeskemail.png" style='height:.8rem;'>
+			</div>
+			<div class="col-md-6 col-sm-12 text-center">
+				<a href="#" target="_blank"><u>Polytechnic University of the Philippines</u></a> | 
+		    <a href="#" target="_blank"><u>Terms of Use </u></a> | 
+			<a href="#" target="_blank"><u>Privacy Statement</u></a>| 
+		    <a href="#">Version 22.04.29.A</a>
+			</div>
+  	</div>
+  </footer>
+
+</div><!-- ./wrapper -->
+<!-- just a modal with Close button, this is just for alerts and not confirmation -->
+<div class="modal fade" id="template_modal">
+  <div class="modal-dialog" id="template_modal_dialog">
+    <div class="modal-content" id="template_modal_content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="template_modal_title">&nbsp;</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="template_modal_body">
+        <p>&nbsp;</p>
+      </div>
+      <div class="modal-footer content-right">
+        &nbsp;
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<script>
+ var csrfName = 'csrf_tk',
+    csrfHash = '44a7981e021a56fa9cb8244c09df21a7';
+
+
+ $(function() {
+    	
+		
+	
+    
+
+
+
+	
+  });
+  
+  function openMail(msgID, msgSubj, msgFrom, msgDate)
+{
+  $('#modal-msg-title').html(urldecode(msgSubj));
+  $('#msg-from').html(urldecode(msgFrom));
+  $('#msg-date').html(urldecode(msgDate));
+  $('#msg-body').html('<div class="text-center"><br><i class="fas fa-2x fa-sync fa-spin"></i></div>');
+
+  param = { [csrfName]: csrfHash, msgID: msgID };
+  $.post('https://sis2.pup.edu.ph/student/home/message_details', param,
+    function(data, status){
+      $('#msg-body').html(data.msgBody);
+      csrfName = data.csrfName;
+      csrfHash = data.csrfHash;
+    }
+  ,'json');
+}
+
+  function show_modal(title, body, bg='default', size='')
+  {
+    $('#template_modal').modal('show');
+    $('#template_modal_dialog').addClass('modal-'+size);
+    $('#template_modal_content').removeClass('bg-default bg-info bg-primary bg-danger bg-warning bg-success');
+    $('#template_modal_content').addClass('bg-'+bg);
+    $('#template_modal_title').html(urldecode(title));
+    $('#template_modal_body').html(urldecode(body));
+  }
+
+  function urldecode(str) {
+	   return decodeURIComponent((str+'').replace(/\+/g, '%20'));
+	}
+
+  //alerts
+  function toast(title,body,type)
+  {
+    $(document).Toasts('create', {
+      title: title,
+      class: 'bg-'+type,
+      autohide: true,
+      delay: 5000,
+      body: body
+    })
+  }
+
+  function download_file(url)
+  {
+    toast('Downloading','Please wait and secure a copy of the file after.','info');
+    window.location = url;
+  }
+</script>
+<style>
+  .toast{ min-width: 300px; }
+</style><script>
+
+window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#252e39"
+      },
+      "button": {
+        "background": "#14a7d0"
+      }
+    },
+    "content": {
+      "message": "We use cookies to ensure you get the best experience on our Website and Online Services. By continuing, you agree to our use of cookies.\n",
+      "link": "<font style='color: #ffffff'>More info</font>",
+      "href": "http://www.pup.edu.ph/privacy"
+    }
+})});
+
+</script>
+</body>
+
+<script src="osssac/student/assets/admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="osssac/student/assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="osssac/student/assets/admin/plugins/sparklines/sparkline.js"></script>
+<script src="osssac/student/assets/admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="osssac/student/assets/admin/plugins/select2/js/select2.full.min.js"></script>
+<script src="osssac/student/assets/admin/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="osssac/student/assets/admin/plugins/jquery-validation/additional-methods.min.js"></script>
+<script src="osssac/student/assets/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="osssac/student/assets/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="osssac/student/assets/admin/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="osssac/student/assets/admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="osssac/student/assets/admin/dist/js/adminlte.js"></script>
+
+<!-- BEGIN ADDITIONAL JS: for closing all tabs in an accordion before opening the current clicked one
+from url: https://stackoverflow.com/questions/39862715/how-to-close-an-accordion-tab-when-clicking-another-one
+ -->
+<!--<script>
+$('#acc').click(function(){
+
+  if( $(this).hasClass('active') ){
+    $(this).removeClass('active');
+    $(this).next().removeClass('show');
+  }else{
+    $('#acc').removeClass('active');
+    $('.card').removeClass('show');
+
+    $(this).addClass('active');
+    $(this).next().addClass('show');
+  }
+
+})
+</script>-->
+<!-- END ADDITIONAL JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27004649-1"></script>
+<script>
+	 window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-27004649-1');
+	
+	$(function () 
+	{
+
+		$(".select2list").select2();
+
+		$('.datatables').DataTable({
+		  "responsive": true,
+		  "paging": false,
+		  "lengthChange": false,
+		  "searching": false,
+		  "ordering": false,
+		  "info": true,
+		  "autoWidth": false
+		});
+		
+		$('.datatables1').DataTable({
+		  "responsive": true,
+		  "paging": false,
+		  "lengthChange": false,
+		  "searching": false,
+		  "ordering": false,
+		  "info": false,
+		  "autoWidth": false
+		});
+	});
+
+  
+</script> -->
+</body>
+</html>
